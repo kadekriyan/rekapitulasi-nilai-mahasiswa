@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Jadwal</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="d-flex sidebar-header">
+                <button id="toggle-btn" type="button">
+                    <img src="../img/profil.jpg" alt="avatar" class="avatar">
+                </button>
+                <div class="sidebar-profile">
+                    <span class="nim">23015056</span>
+                    <span class="name">Kadek Riyan Kusuma Putra</span>
+                </div>
+            </div>
+
+            <ul class="sidebar-nav expand">
+                <li class="sidebar-item">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i class="bi bi-speedometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="mata-kuliah.html" class="sidebar-link">
+                        <i class="bi bi-card-list h2"></i>
+                        <span>Mata Kuliah</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="rekap-nilai.html" class="sidebar-link">
+                        <i class="bi bi-folder"></i>
+                        <span>Rekap Nilai</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="setting.html" class="sidebar-link">
+                        <i class="bi bi-gear-wide-connected"></i>
+                        <span>Setting</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="/index.html" class="sidebar-link">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main">
+            <div class="pt-4 ms-4 text-md-start text-center">
+                <h1 class="fs-1">Tambah Jadwal Mata Kuliah</h1>
+            </div>
+            <div class="py-4 ps-4">
+                <a href="/pages/dashboard.html">
+                    <i class="bi bi-arrow-left-circle h2"></i>
+                </a>
+            </div>
+            <!-- content -->
+            <div class="menu-dashboard pt-4">
+                <!-- <div class="well pt-4 bg-warning"> -->
+                <div class="container mt-4">
+                    <form>
+                        <div class="row mb-4">
+                            <div class="col-md-6 col-12">
+                                <label for="mata_kuliah" class="fs-5">Mata Kuliah</label>
+                                <select class="form-select form-select-lg" id="mata_kuliah">
+                                    <option value="Pemrograman Web">Pemrograman Web</option>
+                                    <option value="Dasar Pemrograman">Dasar Pemrograman</option>
+                                    <option value="Algoritma dan Struktur Data">Algoritma dan Struktur Data</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label for="prodi" class="fs-5">Prodi</label>
+                                <select class="form-select form-select-lg" id="prodi">
+                                    <option value="D3 - Teknik Informatika">D3 - Teknik Informatika</option>
+                                    <option value="D4 - Teknik Informatika">D4 - Teknik Informatika</option>
+                                    <option value="S1 - Teknik Informatika">S1 - Teknik Informatika</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 col-12">
+                                <label for="kelas" class="fs-5">Kelas</label>
+                                <select class="form-select form-select-lg" id="kelas">
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label for="semester" class="fs-5">Semester</label>
+                                <select class="form-select form-select-lg" id="semester">
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 col-12">
+                                <div class="form-outline datetimepicker" data-mdb-inline="true ">
+                                    <label for="waktu" class="fs-5">Waktu</label><br>
+                                    <input id="waktu" type="datetime-local" name="waktu" class="form-control-lg" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label for="ruang" class="fs-5">Ruang</label>
+                                <select class="form-select form-select-lg" id="ruang">
+                                    <option value="R.07.04.02">R.07.04.02</option>
+                                    <option value="R.08.05.01">R.08.05.01</option>
+                                    <option value="R.09.06.03">R.09.06.03</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 col-12">
+                                <label for="keterangan" class="fs-5">Keterangan</label>
+                                <select class="form-select form-select-lg" id="keterangan">
+                                    <option value="Offline">Offline</option>
+                                    <option value="Online">Online</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label for="deskripsi" class="fs-5">Deskripsi</label>
+                                <input type="text" class="form-control form-control-lg" id="deskripsi"
+                                    placeholder="Contoh : Pengenalan Web Dasar">
+                            </div>
+                        </div>
+
+                        <!-- <input class="btn btn-primary btn-lg w-100" type="submit" value="Submit"> -->
+                        <a class="btn btn-primary btn-lg w-100" href="dashboard.html" role="submit">Submit</a>
+                    </form>
+                </div>
+                <!-- </div> -->
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>
